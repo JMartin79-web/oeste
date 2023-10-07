@@ -1,0 +1,20 @@
+.home-container{
+    @include container;
+    @include d-column-center;
+    height: 100vh;
+    .home{
+        @include div-width;
+        @include padding50;
+        .home-h1{ text-align: center; }
+        .home-links{
+            @include vertical-padding15;
+            @include d-column-center;
+
+            .home-links-link{
+                @include button1;
+                margin: .5rem 0rem;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@mixin button1{
+    text-decoration: none;
+    background-color: $verde;
+    
+    color: $negro;
+    font-weight: $semiBold;
+
+    border: 3px solid $verde;
+    border-radius: 10px;
+    padding: 10px 15px;
+    
+    &:hover{
+        background-color: $verde;
+        @include transition;
+
+    }
+
+}
+
+@mixin button1-clicked{
+    text-decoration: none;
+    background-color: $verde;
+    
+    color: $negro;
+    font-weight: $semiBold;
+
+    border: 3px solid $verde;
+    border-radius: 10px;
+    padding: 10px 15px;
+    
+    &:hover{
+        background-color: $verde;
+        @include transition;
+        
+    }
+
+}
+
+@mixin button-back{
+    height: 50px;
+    color: $negro;
+    font-size: 1rem;
+    font-weight: $semiBold;
+    text-decoration: none;
+    text-align: start;
+    display: inline-flex;
+    align-items: center;
+
+    svg{
+        margin-top: -.1rem;
+        width: 1rem;
+        height: 1rem;
+        fill: $negro;
+    }
+    &:hover{
+        color: $verde-clicked;
+        svg{fill: $verde-clicked;}
+    }
+}

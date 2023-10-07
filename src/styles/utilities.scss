@@ -1,0 +1,133 @@
+
+// font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+// COLORES
+$negro: #2f3130;
+$blanco: #FFFBFA;
+
+$celeste: #97cfec;
+$rosa: #ffb3bd;
+$salmon: #FC9A9A;
+
+$platimun: #E8E8E8;
+$violeta: #E4CEED;
+
+$verde: #d6ead8;
+$verde-clicked: #AED5B2;
+
+$amarillo: #ffe8c0;
+
+
+// baja opacidad
+$negro50: #2f31309f;
+$blanco50: #fffdfabe;
+
+// FONT WEIGHT
+$thin: 100;
+$extraLight : 200;
+$light : 300;
+$regular : 400;
+$medium : 500;
+$semiBold : 600;
+$bold : 700;
+$extraBold : 800;
+$black : 900;
+
+
+
+
+// MIXIN
+@mixin d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin d-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin d-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin d-column-center-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+// contenedor div
+
+@mixin container {
+    width: 100vw;
+}
+
+@mixin div-width {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+}
+
+@mixin div-2col {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+// padding
+
+@mixin padding5{padding: 5px;}
+@mixin padding10{padding: 10px;}
+@mixin padding15{padding: 15px;}
+@mixin padding20{padding: 20px;}
+@mixin padding25{padding: 25px;}
+@mixin padding50{padding: 50px;}
+
+@mixin vertical-padding5{padding: 5px 0px;}
+@mixin vertical-padding10{padding: 10px 0px;}
+@mixin vertical-padding15{padding: 15px 0px;}
+@mixin vertical-padding20{padding: 20px 0px;}
+@mixin vertical-padding25{padding: 25px 0px;}
+@mixin vertical-padding50{padding: 50px 0px;}
+
+// margin
+
+@mixin margin5{margin: 5px;}
+@mixin margin10{margin: 10px;}
+@mixin margin15{margin: 15px;}
+@mixin margin20{margin: 20px;}
+@mixin margin25{margin: 25px;}
+@mixin margin50{margin: 50px;}
+
+@mixin vertical-margin5{margin: 5px 0px;}
+@mixin vertical-margin10{margin: 10px 0px;}
+@mixin vertical-margin15{margin: 15px 0px;}
+@mixin vertical-margin20{margin: 20px 0px;}
+@mixin vertical-margin25{margin: 25px 0px;}
+@mixin vertical-margin50{margin: 50px 0px;}
+
+
+// ANIMATIONS
+@mixin transition{
+    transition: all .3s ease;
+}
+
+/*
+
+// TABLET
+@media screen and (max-width: 768px){
+    
+}
+
+// MOBILE
+@media screen and (max-width: 360px) {
+
+}
+
+*/

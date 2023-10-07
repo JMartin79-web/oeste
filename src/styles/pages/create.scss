@@ -1,0 +1,72 @@
+.create-container{
+    @include container;
+    @include d-column-center;
+    @include padding10;
+    min-height: 100vh;
+    .create-back-container{
+        .create-back{ @include button-back; }
+        @include padding5;
+        @include div-width;
+        margin: 0;
+
+    }
+
+    .create-h1{ text-align: center; }
+
+    .create-form{
+        @include div-width;
+        min-height: 100%;
+
+        .form-section{
+            background-color: $verde;
+            @include padding15;
+            @include vertical-margin15;
+            border-radius: 20px;
+            h3{ @include vertical-margin10;}
+            /* inputs normales*/
+            .create-input{
+                all: unset;
+                background-color: $blanco;
+                @include vertical-margin10;
+                padding: 5px 10px;
+                border-radius: 5px;
+                display: inline-flex;
+                align-items: center;
+                width: -webkit-fill-available;
+                max-width: 95%;
+            }
+            .create-date{
+                background-color: $blanco;
+                @include vertical-margin10;
+                padding: 5px 10px;
+                border-radius: 5px;
+                display: inline-flex;
+                align-items: center;
+                max-width: 95%;}
+        }
+
+
+        /* DIFERENTES COLORES */
+
+        .form-section-date{ background-color: $platimun; }
+        .form-section-aud{ background-color: $violeta; }
+        .form-section-plat{ background-color: $amarillo; }
+
+        .form-section-mic{
+            .mics{
+                display: inline-flex;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        .form-section-mic3{
+            background-color: $celeste;
+        }
+        .form-section-mic4{
+            background-color: $salmon;
+        }
+
+    }
+
+}

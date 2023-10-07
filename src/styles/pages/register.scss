@@ -1,0 +1,17 @@
+.register-container{
+    @include container;
+    @include d-column-center;
+    min-height: 100vh;
+    .register-back-container{
+        .register-back{@include button-back;}
+        @include padding5;
+        @include div-width;
+        margin: 0;
+    }
+    .register{
+        @include div-width;
+        @include padding50;
+        .register-h1{ text-align: center; }
+
+    }
+}
