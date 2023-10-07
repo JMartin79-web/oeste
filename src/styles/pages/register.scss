@@ -8,6 +8,8 @@
         @include div-width;
         margin: 0;
     }
+    .register-h1{ text-align: center; }
+
     .register{
         @include div-width;
         @include padding50;
