@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
-//import { getDatos, getCategoryDatos } from "../../services/firebase";
+import { getRegisters } from "../../services/firebase.js";
+import CardRegister from "./CardRegister";
 
 function Register() {
+
+    const [datosList, setdatosList] = useState([])
+    useEffect(()=>{
+        getRegisters().then((respuesta) => {
+            setdatosList(respuesta)
+            console.log(datosList)
+        })
+    },[])
+
 return (
 
 <div className="register-container">
@@ -20,7 +30,15 @@ return (
     <h1 className="register-h1">Ver registros</h1>
 
     <main className="register">
-    
+
+        <div className="register-filter">
+            <h3>Filtrar</h3>
+        </div>
+
+        <div className="register-data-container">
+            <CardRegister datos={datosList} />
+        </div>
+
     </main>
 
 

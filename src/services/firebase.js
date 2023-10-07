@@ -1,7 +1,14 @@
 import { initializeApp } from "firebase/app";
 
 // Obtén todos los documentos de una colección
-import { addDoc, collection, getFirestore } from "firebase/firestore"; 
+import {
+    addDoc,
+    getDocs, 
+    collection, 
+    getFirestore,
+    orderBy,
+    query 
+} from "firebase/firestore"; 
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -44,16 +51,18 @@ export async function pushRegister(data){
     
 }
 
-// funcion para traer los datos
+// funcion para recibir datos
+export async function getRegisters(){
+    const collectionRef = collection(db, "registros")
+    const q = query(collectionRef, orderBy("date"))
+    let results = await getDocs(q)
+    
+    console.log("resultados: ", results)
 
-export async function getRegister(){
-    try {
-        
+    let datos = results.docs.map( (doc)=>{
+        return ({ id: doc.id, ...doc.data()})
+    })
+    
 
-        
-
-    } catch (e) {
-        console.error("Error getting document: ", e);
-        
-    }
+    return datos
 }
