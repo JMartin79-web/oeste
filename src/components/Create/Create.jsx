@@ -16,6 +16,7 @@ function Create() {
         "John Rodriguez",
         "Jorge Quinteros",
         "Jorge De Angelis",
+        "Maximo Rodriguez",
         "Mario Rivas",
         "Marcelo Aguilera",
         "Martin Aguirre",
