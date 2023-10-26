@@ -33,12 +33,14 @@ function Create() {
 
     // Date que se consigue sin form
     let today = new Date().toLocaleDateString().split("/")
-    let todayDate = (today[2] + "-" + today[1] + "-" + today[0])
-
+    let todayDate = (today[0] + "-" + today[1] + "-" + today[2])
     const onHandleSubmit = (e) => {
         e.preventDefault()
+
         // Se consigue del form si se puso, o sino de la variable todayDate
-        let dateTime = e.target.date.value || todayDate
+        let targetDateValue = e.target.date.value.split("-")
+        let targetDate = (targetDateValue[2] + "-" + targetDateValue[1] + "-" + targetDateValue[0])
+        let dateTime = targetDate || todayDate
 
         // datos conseguidos
         let date = dateTime

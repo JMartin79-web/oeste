@@ -8,14 +8,19 @@
     // BUTTON
     @import "./button.scss";
 
+    // SVG
+    @import "./svg.scss";
 
 // ANIMACIONES
 
 
 // PAGINAS
     @import "./pages/home.scss";
+    
     @import "./pages/create.scss";
+
     @import "./pages/register.scss";
+        @import "./pages/card.scss";
 
 
 

@@ -1,0 +1,92 @@
+.card{
+    @include padding15;
+    @include vertical-margin15;
+    border-radius: 20px;
+    border: 3px solid $platimun;
+    
+    // PARTE DE LA FECHA
+    .card-sec-date{
+        @include padding5;
+        @include margin5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 7px;
+        background-color: $blanco;
+        .card-sec-date-date{
+            .card-title{ font-size: 1.1rem; font-weight: $semiBold; }
+            .card-subtitle{ font-size: .9rem; font-weight: $semiBold; margin-top: .2rem;}
+            .card-data{ font-size: .8rem; font-weight: $regular;}
+        }
+
+        .card-sec-date-icon{
+            width: 2rem;
+            height: 2rem;
+            @include d-flex-center;
+        }
+    }
+    
+
+    
+    // DATOS
+    .card-sec-info-show{
+        animation-name: card-animation-show;
+        animation-duration: .1s;
+        width: 100%;
+        // MOSTRANDO DATOS 
+        .card-sec-data{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    
+            .card-sec{
+                @include padding5;
+                @include margin5;
+                background-color: $blanco50;
+                border-radius: 7px;
+                .card-title{ font-size: 1.1rem; font-weight: $semiBold; }
+                .card-subtitle{ font-size: .9rem; font-weight: $semiBold; margin-top: .2rem;}
+                .card-data{ font-size: .8rem; font-weight: $regular;}
+            }
+            .card-sec-sonido{ background-color: $violeta; }
+            .card-sec-plataforma{ background-color: $amarillo; }
+            .card-sec-mic-3{ background-color: $celeste; }
+            .card-sec-mic-4{ background-color: $salmon; }
+        }
+    
+    
+        .card-actions{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            @include vertical-padding5;
+            .card-action{
+                @include padding5;
+                cursor: pointer;
+                
+            }
+            .card-action-delete{
+                border: 2px solid $salmon;
+                border-radius: 5px;
+            }
+            .card-action-edit{
+                border: 2px solid $verde;
+                margin-left: 10px;
+                border-radius: 5px;
+    
+            }
+    
+        }
+
+    }
+
+    .card-sec-info-hidden{
+        animation-name: card-animation-hidden;
+        animation-duration: .2s;
+        max-height: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+
+
+    }
+}

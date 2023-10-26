@@ -25,64 +25,7 @@
             h3{ @include vertical-margin10;}
         }
 
-        .register-data-container{
-            .display-cards{
-                .card{
-                    @include padding15;
-                    @include vertical-margin15;
-                    border-radius: 20px;
-                    border: 3px solid $platimun;
-                    
-                    
-                    
-                    .card-actions{
-                        width: 100%;
-                        display: flex;
-                        @include vertical-padding5;
-                        .card-action{
-                            @include padding5;
-                            cursor: pointer;
-                            
-                        }
-                        .card-action-delete{
-                            border: 2px solid $salmon;
-                            border-radius: 5px;
-                        }
-                        .card-action-edit{
-                            border: 2px solid $verde;
-                            margin-left: 10px;
-                            border-radius: 5px;
-
-                        }
-
-                    }
-                    
-                    .card-sec-data{
-                        display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-                        
-                        .card-sec{
-                            @include padding5;
-                            @include margin5;
-                            background-color: $blanco50;
-                            border-radius: 7px;
-                            .card-title{ font-size: 1.1rem; font-weight: $semiBold; }
-                            .card-subtitle{ font-size: .9rem; font-weight: $semiBold; margin-top: .2rem;}
-                            .card-data{ font-size: .8rem; font-weight: $regular;}
-                        }
-    
-                        .card-sec-date{ background-color: $platimun; }
-                        .card-sec-sonido{ background-color: $violeta; }
-                        .card-sec-plataforma{ background-color: $amarillo; }
-    
-                        .card-sec-mic-3{ background-color: $celeste; }
-                        .card-sec-mic-4{ background-color: $salmon; }
-                    }
-
-
-                }
-            }
-        }
+        
     }
 }
 
@@ -99,6 +42,6 @@
 // MOBILE
 @media screen and (max-width: 360px) {
     .register-container{
-        .register{ @include padding15; }
+        .register{ @include padding10; }
     } 
 }

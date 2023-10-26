@@ -114,9 +114,48 @@ $black : 900;
 
 
 // ANIMATIONS
-@mixin transition{
+@mixin animation-transition{
     transition: all .3s ease;
 }
+
+
+@keyframes card-animation-show{
+    0%{
+        padding: 0;
+        max-height: 0;
+        opacity: 0;
+        display: block;
+    }
+
+    100%{
+        display: block;
+        opacity: 1; 
+        @include padding15;
+        max-height: 400px;
+        height: fit-content;
+    }
+}
+
+@keyframes card-animation-hidden{
+    0%{
+        @include padding15;
+        max-height: 400px;
+        height: fit-content;
+        opacity: 1;
+        display: block;
+    }
+    90%{
+        opacity: 0;
+        max-height: 0;
+    }
+    100%{
+        display: block;
+        padding: 0;
+        height: 0;
+    }
+}
+
+
 
 /*
 

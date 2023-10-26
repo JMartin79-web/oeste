@@ -6,6 +6,7 @@ import CardRegister from "./CardRegister";
 function Register() {
 
     const [datosList, setdatosList] = useState([])
+    
     useEffect(()=>{
         getRegisters().then((respuesta) => {
             setdatosList(respuesta)

@@ -11,7 +11,7 @@
     
     &:hover{
         background-color: $verde;
-        @include transition;
+        @include animation-transition;
 
     }
 

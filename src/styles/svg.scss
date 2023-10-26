@@ -1,0 +1,28 @@
+.arrow{
+    width: 1rem;
+    height: 1rem;
+    fill: $platimun;
+    rotate: 0deg;
+
+    @include d-flex-center;
+    @include animation-transition;
+    cursor: pointer;
+    overflow-y: visible;
+
+    &:hover{ fill: $verde-clicked; }
+}
+
+.arrow-clicked{
+    width: 1rem;
+    height: 1rem;
+    fill: $platimun;
+    rotate: 180deg;
+
+    @include d-flex-center;
+    @include animation-transition;
+
+    cursor: pointer;
+
+    overflow-y: visible;
+    &:hover{ fill: $verde-clicked }
+}
