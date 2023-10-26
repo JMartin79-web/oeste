@@ -59,21 +59,6 @@
             display: flex;
             justify-content: flex-end;
             @include vertical-padding5;
-            .card-action{
-                @include padding5;
-                cursor: pointer;
-                
-            }
-            .card-action-delete{
-                border: 2px solid $salmon;
-                border-radius: 5px;
-            }
-            .card-action-edit{
-                border: 2px solid $verde;
-                margin-left: 10px;
-                border-radius: 5px;
-    
-            }
     
         }
 

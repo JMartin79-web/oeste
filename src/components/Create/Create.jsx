@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { pushRegister } from '../../services/firebase'
+import ButtonCreate from '../Button/ButtonCreate'
 function Create() {
     // Array de microfonistas
     const microfonistasArray =  [
@@ -199,7 +200,7 @@ function Create() {
 
             </div>
 
-            <button type="submit">Crear</button>
+            <ButtonCreate type="submit" txt="Crear"/>
 
         </form>
 

@@ -19,15 +19,36 @@ function CardRegister(props) {
       if(mes == 12){ return(" de diciembre del ") }
     }
 
-    
+    function getDayString(day){
+      let dia = parseInt(day)
+      if(dia == 1){return("Lunes")}
+      if(dia == 2){return("Martes")}
+      if(dia == 3){ return("Miércoles") }
+      if(dia == 4){ return("Jueves") }
+      if(dia == 5){ return("Viernes") }
+      if(dia == 6){ return("Sábado") }
+      if(dia == 7){ return("Domingo") }
+    }
     return (
       <div className="display-cards">
         {props.datos.map( (register) => {
           
           let day = register.date.split("-")
+          // conseguir mes 
           let month = day[1]
           let textMonth = getMonth(month)
-          let finalDate = day[0]+ textMonth + day[2]
+          
+          // conseguir fecha completa en YY/MM/DD para poder conseguir dia en texto
+          let completeDate = day[2]+"/"+day[1]+"/"+day[0]
+          let date = new Date (completeDate)
+
+          // conseguir fecha, pasarla a texto y pasarla a texto encerrado en "()""
+          let dayName = date.getDay()
+          let textDay = getDayString(dayName)
+          let dayNameFinal = " (" + textDay + ")"
+
+          let finalDate = day[0]+ textMonth + day[2] + dayNameFinal
+
             return(
                 <Card
                 id= {register.id}

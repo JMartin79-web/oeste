@@ -1,0 +1,69 @@
+.delete-button{
+    width: 2rem;
+    height: 2rem;
+    @include margin5;
+    @include d-flex-center;
+    background-color: transparent;
+    border: .15rem solid $rosa;
+    border-radius: .4rem;
+    cursor: pointer;
+    @include animation-transition;
+
+    .delete-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $rosa;
+        @include d-flex-center;
+    }
+
+    &:hover{
+        border: .15rem solid $salmon;
+        .delete-icon{
+            fill: $salmon;
+        }
+    }
+
+    &:focus{
+        @include animation-transition;
+        background-color: $salmon;
+        border: .15rem solid $salmon;
+        .delete-icon{
+            fill: $blanco;
+        }
+    }
+}
+
+.edit-button{
+    width: 2rem;
+    height: 2rem;
+    @include margin5;
+    @include d-flex-center;
+    background-color: transparent;
+    border: .15rem solid $celeste;
+    border-radius: .4rem;
+    cursor: pointer;
+    @include animation-transition;
+
+    .edit-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $celeste;
+        @include d-flex-center;
+    }
+
+    &:hover{
+        border: .15rem solid $blue;
+        .edit-icon{
+            fill: $blue;
+        }
+    }
+
+    &:focus{
+        @include animation-transition;
+        background-color: $blue;
+        border: .15rem solid $blue;
+        .edit-icon{
+            fill: $blanco;
+        }
+    }
+}

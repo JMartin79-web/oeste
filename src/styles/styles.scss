@@ -4,14 +4,15 @@
 
     // GENERAL
     @import "./general.scss";
+    
 
+// COMPONENTS
+        
     // BUTTON
-    @import "./button.scss";
-
+        @import "./components/button.scss";
+        @import "./components/buttonsvg.scss";
     // SVG
-    @import "./svg.scss";
-
-// ANIMACIONES
+        @import "./components/svg.scss";
 
 
 // PAGINAS
@@ -21,7 +22,6 @@
 
     @import "./pages/register.scss";
         @import "./pages/card.scss";
-
 
 
 

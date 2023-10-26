@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import ButtonCreate from '../Button/ButtonCreate'
+import EditButton from '../Button/EditButton'
+import DeleteButton from '../Button/DeleteButton'
 
 
 function Card(props) {
@@ -70,8 +73,8 @@ function Card(props) {
             </div>
 
             <div className='card-actions'>
-                <div className='card-action card-action-delete'> Borrar </div>
-                <div className='card-action card-action-edit'> Editar </div>
+                <EditButton/>
+                <DeleteButton/>
             </div>
 
         </div>

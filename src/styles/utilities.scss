@@ -8,6 +8,7 @@ $negro: #2f3130;
 $blanco: #FFFBFA;
 
 $celeste: #97cfec;
+$blue: #30A1D9;
 $rosa: #ffb3bd;
 $salmon: #FC9A9A;
 
@@ -155,7 +156,20 @@ $black : 900;
     }
 }
 
-
+@keyframes button-create-animation{
+    0%{
+        
+    }
+    25%{
+        transform: scale(.8);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 /*
 

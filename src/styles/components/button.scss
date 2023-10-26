@@ -57,3 +57,28 @@
         svg{fill: $verde-clicked;}
     }
 }
+
+
+.button-create{
+    text-decoration: none;
+    background-color: $verde;
+    color: $negro;
+    font-weight: $semiBold;
+    
+    border: 3px solid $verde;
+    border-radius: 10px;
+    padding: 10px 15px;
+    
+    cursor: pointer;
+
+    &:hover{
+        background-color: $verde;
+        @include animation-transition;
+
+    }
+
+    &:focus{
+        animation: button-create-animation;
+        animation-duration: .5s;
+    }
+}
