@@ -54,7 +54,7 @@ export async function pushRegister(data){
 // funcion para recibir datos
 export async function getRegisters(){
     const collectionRef = collection(db, "registros")
-    const q = query(collectionRef, orderBy("date"))
+    const q = query(collectionRef, orderBy("date", "desc"))
     let results = await getDocs(q)
     
     console.log("resultados: ", results)
