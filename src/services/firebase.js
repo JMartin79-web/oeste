@@ -7,7 +7,9 @@ import {
     collection, 
     getFirestore,
     orderBy,
-    query 
+    query, 
+    Timestamp,
+    serverTimestamp
 } from "firebase/firestore"; 
 
 // Your web app's Firebase configuration
@@ -42,7 +44,8 @@ export async function pushRegister(data){
             mic3p1: data.mic3p1,
             mic3p2: data.mic3p2,
             mic4p1: data.mic4p1,
-            mic4p2: data.mic4p2
+            mic4p2: data.mic4p2,
+            
         });
 
     } catch (e) {

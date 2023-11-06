@@ -35,11 +35,11 @@ function CardRegister(props) {
           
           let day = register.date.split("-")
           // conseguir mes 
-          let month = day[1]
+          let month = day[0]
           let textMonth = getMonth(month)
           
           // conseguir fecha completa en YY/MM/DD para poder conseguir dia en texto
-          let completeDate = day[2]+"/"+day[1]+"/"+day[0]
+          let completeDate = day[2]+"/"+day[0]+"/"+day[1]
           let date = new Date (completeDate)
 
           // conseguir fecha, pasarla a texto y pasarla a texto encerrado en "()""
@@ -47,7 +47,7 @@ function CardRegister(props) {
           let textDay = getDayString(dayName)
           let dayNameFinal = " (" + textDay + ")"
 
-          let finalDate = day[0]+ textMonth + day[2] + dayNameFinal
+          let finalDate = day[1]+ textMonth + day[2] + dayNameFinal
 
             return(
                 <Card

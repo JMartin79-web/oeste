@@ -13,6 +13,7 @@ function Create() {
         "Ezequiel Aguirre",
         "Ezequiel Luna",
         "Gustavo Pellegrini",
+        "Heber Rivas",
         "Horacio Gutierrez",
         "John Rodriguez",
         "Jorge Quinteros",
@@ -32,15 +33,18 @@ function Create() {
         "Sergio Varela"
     ]  
 
+
+    // FORMATO DE LA FECHA ES MM/DD/YY
     // Date que se consigue sin form
     let today = new Date().toLocaleDateString().split("/")
-    let todayDate = (today[0] + "-" + today[1] + "-" + today[2])
+    let todayDate = (today[1] + "-" + today[0] + "-" + today[2])
     const onHandleSubmit = (e) => {
         e.preventDefault()
 
         // Se consigue del form si se puso, o sino de la variable todayDate
         let targetDateValue = e.target.date.value.split("-")
-        let targetDate = (targetDateValue[2] + "-" + targetDateValue[1] + "-" + targetDateValue[0])
+        let targetDate = (targetDateValue[1] + "-" + targetDateValue[2] + "-" + targetDateValue[0])
+
         let dateTime = targetDate || todayDate
 
         // datos conseguidos

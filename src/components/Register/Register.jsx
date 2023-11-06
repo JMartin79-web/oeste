@@ -10,7 +10,7 @@ function Register() {
     useEffect(()=>{
         getRegisters().then((respuesta) => {
             setdatosList(respuesta)
-            console.log(datosList)
+            console.log("datosList desde register: ", datosList)
         })
     },[])
 
